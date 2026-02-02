@@ -1,0 +1,58 @@
+$C = "../Common.ui";
+
+Group {
+  LayoutMode: MiddleCenter;
+
+  $C.@DecoratedContainer {
+    Anchor: (Width: 360);
+    
+    // Title
+    #Title {
+      $C.@Title {
+        @Text = %server.customUI.echo.title;
+      }
+    }
+
+    #Content {
+      LayoutMode: Top;
+      Padding: (Full: 16);
+
+      // Info section
+      Label #VersionText {
+        Text: %server.customUI.echo.info;
+        Anchor: (Height: 24);
+        Style: (FontSize: 14, TextColor: #6e7da1, HorizontalAlignment: Center);
+      }
+
+      // Color picker
+      ColorPicker #ColorPicker {
+        Anchor: (Width: 310, Height: 290, Top: 12);
+        Format: Rgb;
+        Style: $C.@DefaultColorPickerStyle;
+      }
+
+      Group { Anchor: (Vertical: 16, Height: 1); Background: #9AD6FC; }
+      Group { Anchor: (Height: 5); }
+
+      // Buttons row
+      Group {
+        LayoutMode: Center;
+        Anchor: (Height: 50);
+
+        TextButton #AcceptButton {
+          Text: %server.customUI.echo.accept;
+          Anchor: (Width: 150, Height: 44);
+          Style: $C.@DefaultTextButtonStyle;
+        }
+
+        Group { Anchor: (Width: 16); }
+
+        TextButton #CancelButton {
+          Text: %server.customUI.echo.cancel;
+          Anchor: (Width: 150, Height: 44);
+          Style: $C.@CancelTextButtonStyle;
+        }
+      }
+    }
+  }
+}

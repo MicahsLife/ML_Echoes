@@ -1,0 +1,29 @@
+{
+  "Group": "${plugin_group}",
+  "Name": "${plugin_name}",
+  "Version": "${plugin_version}",
+  "Description": "${plugin_description}",
+  "Authors": [
+    {
+      "Name": "${plugin_author}"
+    }
+  ],
+  "Website": "${plugin_website}",
+  "ServerVersion": "${server_version}",
+  "DisabledByDefault": false,
+  "IncludesAssetPack": true,
+  "Main": "${plugin_main_entrypoint}",
+  "load_order": "POSTWORLD",
+  "permissions": {
+    "ml_echoes.admin": {
+      "description": "Full admin access",
+      "default": "op"
+    },
+    "ml_echoes.use": {
+      "description": "Basic usage permission",
+      "default": true
+    }
+  },
+  "Dependencies": {},
+  "OptionalDependencies": {}
+}

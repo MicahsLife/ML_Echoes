@@ -1,0 +1,113 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.ML_Echoes_Wand.name",
+    "Description": ""
+  },
+  "Id": "ML_Echoes_Wand",
+  "Icon": "Icons/ItemsGenerated/echo_wand.png",
+  "Model": "Items/EchoWand/echo_wand.blockymodel",
+  "Texture": "Items/EchoWand/echo_wand.png",
+  "Quality": "Common",
+  "MaxStack": 1,
+  "Categories": [
+    "Items.ML_Echoes"
+  ],
+  "Interactions": {
+    "Primary": {
+      "Interactions": [
+        {
+          "Type": "ml_echoes.echo"
+        },
+        {
+          "Type": "Simple",
+          "Effects": {
+            "WorldSoundEventId": "SFX_Portal_Neutral_Open"
+          }
+        },
+        {
+          "Type": "Simple",
+          "Effects": {
+            "ItemAnimationId": "SwingDown"
+          }
+        },
+        {
+          "Type": "Simple",
+          "Effects": {
+            "Particles": [
+              {
+                "SystemId": "IceBall",
+                "DetachedFromModel": false,
+                "Scale": 0.5,
+                "TargetEntityPart": "Self",
+                "PositionOffset": {
+                  "X": 0.25,
+                  "Y": -0.5
+                },
+                "Color": "#5798a9"
+              }
+            ],
+            "CameraEffect": "Battleaxe_Whirlwind"
+          }
+        }
+      ],
+      "Cooldown": {
+        "Id": "ml_echoes.echo_cooldown",
+        "Cooldown": 1.5
+      }
+    },
+    "Secondary": {
+      "Interactions": [
+        {
+          "Type": "ml_echoes.echo_settings"
+        }
+      ],
+      "Cooldown": {
+        "Id": "ml_echoes.echo_cooldown",
+        "Cooldown": 1
+      }
+    }
+  },
+  "PlayerAnimationsId": "Axe",
+  "ItemSoundSetId": "ISS_Weapons_Blunt_Small",
+  "Tags": {
+    "Type": [
+      "Tool"
+    ],
+    "Family": [
+      "ML"
+    ]
+  },
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Ingredient_Bar_Iron",
+        "Quantity": 2
+      },
+      {
+        "ItemId": "Ingredient_Fibre",
+        "Quantity": 4
+      },
+      {
+        "ItemId": "Ingredient_Tree_Sap",
+        "Quantity": 4
+      },
+      {
+        "ItemId": "Ore_Mithril",
+        "Quantity": 2
+      }
+    ],
+    "PrimaryOutput": {
+      "ItemId": "ML_Echoes_Wand",
+      "Quantity": 1
+    },
+    "BenchRequirement": [
+      {
+        "Id": "Workbench",
+        "Categories": [
+          "Workbench_Tools"
+        ]
+      }
+    ],
+    "TimeSeconds": 3
+  }
+}

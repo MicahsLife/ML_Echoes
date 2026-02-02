@@ -1,0 +1,10 @@
+items.ML_Echoes_Wand.name=Echo Wand
+
+customUI.plugin.refresh=Refresh
+customUI.plugin.close=Close
+customUI.plugin.esc=Press ESC to close
+
+customUI.echo.title=Echo Wand
+customUI.echo.info=Choose Your Echo Color:
+customUI.echo.accept=Accept
+customUI.echo.cancel=Cancel
