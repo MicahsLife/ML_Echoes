@@ -25,4 +25,5 @@ public class _InteractionRegistration {
             MLConstants.LOGGER.at(Level.WARNING).withCause(e).log("[ML_Echoes] Failed to register interaction events");
         }
     }
+
 }

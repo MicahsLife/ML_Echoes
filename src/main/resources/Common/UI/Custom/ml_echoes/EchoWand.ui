@@ -40,7 +40,7 @@ Group {
         Anchor: (Height: 50);
 
         TextButton #AcceptButton {
-          Text: %server.customUI.echo.accept;
+          Text: %server.customUI.plugin.accept;
           Anchor: (Width: 150, Height: 44);
           Style: $C.@DefaultTextButtonStyle;
         }
@@ -48,7 +48,7 @@ Group {
         Group { Anchor: (Width: 16); }
 
         TextButton #CancelButton {
-          Text: %server.customUI.echo.cancel;
+          Text: %server.customUI.plugin.cancel;
           Anchor: (Width: 150, Height: 44);
           Style: $C.@CancelTextButtonStyle;
         }

@@ -17,8 +17,7 @@ public class _SystemRegistration {
      */
     public static void register(ComponentRegistryProxy<EntityStore> registry) {
         try {
-            // TODO: Remove any systems that aren't in use
-            registry.registerSystem(new PlayerTickSystem());
+            registry.registerSystem(new PlayerRecipeSystem());
 
             MLConstants.LOGGER.at(Level.INFO).log("[ML_Echoes] Registered entity event systems");
         } catch (Exception e) {

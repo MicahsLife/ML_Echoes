@@ -10,6 +10,7 @@ import com.hypixel.hytale.protocol.Color;
 import com.hypixel.hytale.server.core.entity.InteractionContext;
 import com.hypixel.hytale.server.core.entity.entities.Player;
 import com.hypixel.hytale.server.core.inventory.ItemStack;
+import com.hypixel.hytale.server.core.modules.entity.component.DynamicLight;
 import com.hypixel.hytale.server.core.modules.interaction.interaction.CooldownHandler;
 import com.hypixel.hytale.server.core.modules.interaction.interaction.config.SimpleInstantInteraction;
 import com.hypixel.hytale.server.core.universe.PlayerRef;
@@ -85,10 +86,28 @@ public class EchoInteraction extends SimpleInstantInteraction {
         // Tint the current area around the player
         execute(world, playerRef.getTransform().getPosition().toVector3i(), color);
 
-        // Spawn a particle effect
         int r = (color >> 16) & 0xFF;
         int g = (color >> 8) & 0xFF;
         int b = color & 0xFF;
+
+        // Set a colored light, but make it mostly dark and less saturated
+        ComponentType<EntityStore, DynamicLight> lightComponent = DynamicLight.getComponentType();
+        DynamicLight light = commandBuffer.getComponent(ref, lightComponent);
+        float[] hsbVals = java.awt.Color.RGBtoHSB(r, g, b, null);
+        int colorInt = java.awt.Color.HSBtoRGB(hsbVals[0], Math.min(hsbVals[1], 0.1f), 0.05f);
+        int r2 = (colorInt >> 16) & 0xFF;
+        int g2 = (colorInt >> 8) & 0xFF;
+        int b2 = colorInt & 0xFF;
+        ColorLight colorLight = new ColorLight((byte) 1, (byte) r2, (byte) g2, (byte) b2);
+
+        if (light == null) {
+            DynamicLight newLight = new DynamicLight(colorLight);
+            commandBuffer.putComponent(ref, lightComponent, newLight);
+        } else {
+            light.setColorLight(colorLight);
+        }
+
+        // Spawn a particle effects
         ParticleUtil.spawnParticleEffect(
                 "EchoWind",
                 playerRef.getTransform().getPosition().add(0, 0.2, 0),

@@ -1,5 +1,6 @@
 package com.micahslife.ml_echoes.commands;
 
+import com.hypixel.hytale.component.ComponentType;
 import com.hypixel.hytale.component.Ref;
 import com.hypixel.hytale.component.Store;
 import com.hypixel.hytale.server.core.Message;
@@ -11,6 +12,9 @@ import com.hypixel.hytale.server.core.universe.PlayerRef;
 import com.hypixel.hytale.server.core.universe.world.World;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 
+import com.micahslife.ml_echoes.ML_EchoesPlugin;
+import com.micahslife.ml_echoes.components.EchoStoreComponent;
+import com.micahslife.ml_echoes.components._ComponentRegistration;
 import com.micahslife.ml_echoes.ui.PluginPage;
 
 import javax.annotation.Nonnull;
@@ -56,7 +60,9 @@ public class MenuSubCommand extends AbstractPlayerCommand {
 
             // Create and open the custom page
             PluginPage pluginPage = new PluginPage(playerRef);
+            pluginPage.updateCanCraft(ML_EchoesPlugin.getConfig().getCanCraftWand());
             player.getPageManager().openCustomPage(ref, store, pluginPage);
+
             context.sendMessage(Message.raw("Menu opened. Press ESC to close."));
         } catch (Exception e) {
             context.sendMessage(Message.raw("Error opening menu: " + e.getMessage()));

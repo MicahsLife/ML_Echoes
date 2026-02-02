@@ -11,12 +11,11 @@ import javax.annotation.Nullable;
 
 public class EchoStoreComponent implements Component<EntityStore> {
 
+    // Echo Color
     private int color = 7051198;
-
     public int getColor() {
         return color;
     }
-
     public void setColor(int color) {
         this.color = color;
     }

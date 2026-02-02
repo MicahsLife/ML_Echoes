@@ -21,7 +21,7 @@ Group {
   // Status text
   Label #StatusText {
     Text: "Welcome to ML_Echoes!";
-    Anchor: (Height: 30);
+    Anchor: (Height: 22);
     Style: (FontSize: 16, TextColor: #96a9be, HorizontalAlignment: Center);
   }
 
@@ -30,28 +30,40 @@ Group {
   // Info section
   Label #VersionText {
     Text: "Version: 1.0.0 | By MicahsLife";
-    Anchor: (Height: 24);
+    Anchor: (Height: 18);
     Style: (FontSize: 14, TextColor: #6e7da1, HorizontalAlignment: Center);
   }
 
-  // Spacer
-  Group { FlexWeight: 1; }
+  Group { Anchor: (Height: 16); }
+
+  // Can craft wand
+  $C.@CheckBoxWithLabel #CanCraft {
+    @Text = %server.customUI.plugin.canCraft;
+    @Checked = true;
+    LayoutMode: CenterMiddle;
+    Anchor: (Width: 300);
+    TooltipText: %server.customUI.plugin.canCraftTT;
+    Background: #000000(0);
+    Padding: (Full: 5);
+  }
+
+  Group { Anchor: (Height: 16); }
 
   // Buttons row
   Group {
     LayoutMode: Center;
     Anchor: (Height: 50);
 
-    TextButton #RefreshButton {
-      Text: %server.customUI.plugin.refresh;
+    TextButton #AcceptButton {
+      Text: %server.customUI.plugin.accept;
       Anchor: (Width: 150, Height: 44);
       Style: $C.@DefaultTextButtonStyle;
     }
 
     Group { Anchor: (Width: 16); }
 
-    TextButton #CloseButton {
-      Text: %server.customUI.plugin.close;
+    TextButton #CancelButton {
+      Text: %server.customUI.plugin.cancel;
       Anchor: (Width: 150, Height: 44);
       Style: $C.@CancelTextButtonStyle;
     }

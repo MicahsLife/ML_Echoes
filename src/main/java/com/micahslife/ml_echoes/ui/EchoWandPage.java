@@ -87,7 +87,6 @@ public class EchoWandPage extends InteractiveCustomUIPage<EchoWandPage.UIEventDa
 
             case "accept":
                 if (this.playerRef != null) setColorValue(data.rgb);
-                MLConstants.LOGGER.at(Level.INFO).log("[ML_Echoes] " + data.rgb);
                 this.close();
                 break;
 
@@ -130,7 +129,6 @@ public class EchoWandPage extends InteractiveCustomUIPage<EchoWandPage.UIEventDa
                     int g = Integer.valueOf(color.substring(3, 5), 16);
                     int b = Integer.valueOf(color.substring(5, 7), 16);
                     data.setColor((r << 16) | (g << 8) | b);
-                    MLConstants.LOGGER.at(Level.INFO).log("[ML_Echoes] " + data.getColor());
                 } else {
                     MLConstants.LOGGER.at(Level.WARNING).log("[ML_Echoes] Unable to store echo color data on player");
                 }
