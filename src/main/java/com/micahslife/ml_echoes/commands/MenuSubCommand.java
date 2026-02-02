@@ -1,6 +1,5 @@
 package com.micahslife.ml_echoes.commands;
 
-import com.hypixel.hytale.component.ComponentType;
 import com.hypixel.hytale.component.Ref;
 import com.hypixel.hytale.component.Store;
 import com.hypixel.hytale.server.core.Message;
@@ -13,8 +12,6 @@ import com.hypixel.hytale.server.core.universe.world.World;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 
 import com.micahslife.ml_echoes.ML_EchoesPlugin;
-import com.micahslife.ml_echoes.components.EchoStoreComponent;
-import com.micahslife.ml_echoes.components._ComponentRegistration;
 import com.micahslife.ml_echoes.ui.PluginPage;
 
 import javax.annotation.Nonnull;
