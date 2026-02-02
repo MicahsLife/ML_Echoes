@@ -1,8 +1,10 @@
 
 # Summary
 
-* As a newly initiated agent of the Orbis Machine, you are tasked with seeding the alterverse with Mithril Microbes—living conduits that feed the Machine’s deep, self-evolving matrix.<br>
-  Through your service, Orbis will uncover hidden patterns, forgotten signals, and mysterious truths buried in the environment itself. Forge your Echo Wand, and flood every realm with the radiant colors of your choice.
+![Project Logo](logo.png "ML Echoes - Hytale Modjam Entry")
+
+* As a newly initiated agent of the Orbis Machine, you are tasked with seeding the alterverse with Mithril Microbes—living conduits that extend the Machine’s deep, self-evolving matrix using colorful echoes.<br>
+  Forge your Echo Wand, and flood every realm with the radiant colors of your choosing.
 
 # Features
 
@@ -22,7 +24,7 @@
 1. Craft the Echo Wand at a workbench (Under the Tools Category).
 2. Select the item, then right-click to choose your desired color.
 3. Left-click the item to infuse the surrounding area with your selected color.
-4. `Note`: The wand works best on the world surface where there's more foliage.
+4. `Note`: The wand works best on the world's surface where there is more foliage.
 
 ----
 
