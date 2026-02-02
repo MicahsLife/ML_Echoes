@@ -19,7 +19,6 @@ import com.micahslife.ml_echoes.components._ComponentRegistration;
 import com.micahslife.ml_echoes.data.MLConstants;
 
 import javax.annotation.Nonnull;
-import java.awt.*;
 import java.util.logging.Level;
 
 /**

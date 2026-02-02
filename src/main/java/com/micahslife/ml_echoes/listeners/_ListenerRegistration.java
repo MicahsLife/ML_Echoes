@@ -16,7 +16,6 @@ public class _ListenerRegistration {
      */
     public static void register(EventRegistry registry) {
         try {
-            // TODO: Remove any listeners that aren't in use
             new PlayerListener().register(registry);
 
             MLConstants.LOGGER.at(Level.INFO).log("[ML_Echoes] Registered event listeners");

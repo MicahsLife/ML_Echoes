@@ -29,7 +29,6 @@ import it.unimi.dsi.fastutil.longs.Long2IntOpenHashMap;
 import it.unimi.dsi.fastutil.longs.LongOpenHashSet;
 
 import javax.annotation.Nonnull;
-import java.awt.*;
 import java.util.List;
 import java.util.logging.Level;
 
@@ -107,7 +106,7 @@ public class EchoInteraction extends SimpleInstantInteraction {
             light.setColorLight(colorLight);
         }
 
-        // Spawn a particle effects
+        // Spawn a particle effect
         ParticleUtil.spawnParticleEffect(
                 "EchoWind",
                 playerRef.getTransform().getPosition().add(0, 0.2, 0),

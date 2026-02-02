@@ -4,8 +4,7 @@ plugins {
 }
 
 group = "com.micahslife"
-// TODO: Update on release
-version = "0.1.0"
+version = "1.0.0"
 
 val pluginDescription = "This plugin..."
 val pluginAuthor = "MicahsLife"
