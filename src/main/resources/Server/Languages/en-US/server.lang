@@ -1,4 +1,5 @@
 items.ML_Echoes_Wand.name=Echo Wand
+items.ML_Echoes_Wand.desc=Color your world with any tint of your choice. Right-Click to select color, Left-Click to apply.
 
 customUI.plugin.refresh=Refresh
 customUI.plugin.close=Close

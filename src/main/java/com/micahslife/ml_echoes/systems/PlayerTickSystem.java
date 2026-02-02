@@ -4,7 +4,6 @@ import com.hypixel.hytale.component.*;
 import com.hypixel.hytale.component.query.Query;
 import com.hypixel.hytale.component.system.tick.EntityTickingSystem;
 import com.hypixel.hytale.server.core.entity.entities.Player;
-import com.hypixel.hytale.server.core.universe.world.World;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 
 import javax.annotation.Nonnull;
@@ -22,7 +21,7 @@ public class PlayerTickSystem extends EntityTickingSystem<EntityStore> {
                      @Nonnull Store<EntityStore> store,
                      @Nonnull CommandBuffer<EntityStore> commandBuffer) {
 
-        World world = ((EntityStore)store.getExternalData()).getWorld();
+        //World world = ((EntityStore)store.getExternalData()).getWorld();
         Player player = archetypeChunk.getComponent(i, Player.getComponentType());
 
         if (player == null || player.getReference() == null) return;

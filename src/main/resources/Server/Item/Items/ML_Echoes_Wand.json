@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
     "Name": "server.items.ML_Echoes_Wand.name",
-    "Description": ""
+    "Description": "server.items.ML_Echoes_Wand.desc"
   },
   "Id": "ML_Echoes_Wand",
   "Icon": "Icons/ItemsGenerated/echo_wand.png",

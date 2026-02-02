@@ -1,11 +1,12 @@
 
 # Summary:
 
-* 
+* As a newly initiated agent of the Orbis Machine, you are tasked with seeding the alterverse with Mithril Microbes—living conduits that feed the Machine’s deep, self-evolving matrix.<br>
+  Through your service, Orbis will uncover hidden patterns, forgotten signals, and mysterious truths buried in the environment itself. Forge your Echo Wand, let its resonance guide you, and flood every realm with the radiant colors of your choice.
 
 # Features
 
-* 
+* The ability to color your world by applying any tint color you can imagine.
 
 ----
 
@@ -16,10 +17,14 @@
 
 ----
 
-# Settings
+# Instructions
 
-* To open the plugin menu, run this command in chat:<br>
-  `/ml_echoes menu`
+1. Craft the Echo Wand at a workbench (Under the Tools Category).
+2. Select the item, then right-click to choose your desired color.
+3. Left-click the item to infuse the surrounding area with your selected color.
+4. `Note`: The wand only affects the foliage and ground on the world surface.
+
+----
 
 # Important Notes
 
@@ -29,6 +34,12 @@
 
 * Thanks to Jesus Christ who makes all things possible.
 
+----
+
 # Author
 
 * MicahsLife
+
+# Code URL
+
+<https://github.com/MicahsLife/ML_Echoes>
